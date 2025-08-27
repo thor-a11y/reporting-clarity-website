@@ -28,12 +28,15 @@
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 70px;
+            display: flex;
+            align-items: center;
         }
         
         nav {
@@ -86,7 +89,7 @@
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 120px 0 80px;
+            padding: 140px 0 80px;
             text-align: center;
         }
         
@@ -415,6 +418,7 @@
             background: #1e3c72;
             padding: 1rem 0;
             z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .mobile-menu.active {
@@ -442,8 +446,30 @@
                 padding: 0 15px;
             }
             
+            header {
+                height: 65px;
+                padding: 0.6rem 0;
+            }
+            
+            nav {
+                align-items: center;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .cta-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .mobile-menu {
+                top: 65px;
+            }
+            
             .hero {
-                padding: 100px 0 60px;
+                padding: 85px 0 50px;
                 text-align: center;
             }
             
@@ -585,6 +611,28 @@
         }
         
         @media (max-width: 480px) {
+            header {
+                height: 60px;
+                padding: 0.5rem 0;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .cta-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .mobile-menu {
+                top: 60px;
+            }
+            
+            .hero {
+                padding: 75px 0 40px;
+            }
+            
             .hero h1 {
                 font-size: 1.8rem;
             }
@@ -851,6 +899,11 @@
     </div>
 
     <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
         function openModal() {
             document.getElementById('consultationModal').style.display = 'block';
         }

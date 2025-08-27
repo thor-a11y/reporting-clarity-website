@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporting Clarity - AI-Powered Fractional CFO Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-btn {
+            background: #ff6b35;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .cta-btn:hover {
+            background: #e55a2e;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #1e3c72;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        /* Value Proposition */
+        .value-prop {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        /* Services */
+        .services {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card.featured {
+            border: 3px solid #ff6b35;
+            transform: scale(1.05);
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .price {
+            font-size: 2rem;
+            color: #ff6b35;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: 1.5rem 0;
+            flex-grow: 1;
+        }
+        
+        .service-card .btn-primary {
+            margin-top: auto;
+            text-align: center;
+            display: block;
+            flex-shrink: 0;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Reporting Clarity</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" class="cta-btn" onclick="openModal()">Book Discovery Call</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Institutional-Quality Financials<br>Delivered with AI-Powered Precision</h1>
+            <p class="subtitle">Fractional CFO services delivering PE-grade reporting, real-time cash flow visibility, and strategic insights for growing companies</p>
+            <div class="hero-cta">
+                <a href="#" class="btn-primary" onclick="openModal()">Schedule Free Consultation</a>
+                <a href="#" class="btn-secondary" onclick="downloadGuide()">Download Free Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>10th</h3>
+                    <p>Business day delivery of investor-ready financials</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12-Week</h3>
+                    <p>Rolling cash flow forecasts</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Due diligence ready</p>
+                </div>
+                <div class="stat-item">
+                    <h3>AI-Powered</h3>
+                    <p>Automation & insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">Why PE Firms & Portfolio Companies Choose Us</h2>
+            <p class="section-subtitle">We combine cutting-edge AI automation with fractional CFO expertise to deliver institutional-quality financial reporting at a fraction of the cost</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>AI-Powered Speed</h3>
+                    <p>Automated reconciliations, transaction categorization, and anomaly detection accelerate your close cycle by 50% while improving accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Investor-Grade Quality</h3>
+                    <p>Board-ready financial packages with executive commentary that meet the standards of PE firms, lenders, and acquirers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Strategic Insights</h3>
+                    <p>Beyond compliance - we provide CFO-level analysis with actionable recommendations to drive growth and profitability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Cash Flow Mastery</h3>
+                    <p>Real-time cash visibility with 12-week rolling forecasts and KPI dashboards that prevent surprises and optimize working capital.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Exit Ready</h3>
+                    <p>Financial systems and reporting designed for scalability, due diligence readiness, and maximum enterprise value.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Industry Expertise</h3>
+                    <p>Deep experience in professional services, construction, and technology sectors with specialized reporting for complex business models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Service Packages</h2>
+            <p class="section-subtitle">Scalable solutions designed for growing companies</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Operational Insights</h3>
+                    <div class="price">Starting at $7,500/mo</div>
+                    <ul class="service-features">
+                        <li>AI-assisted monthly financial statements</li>
+                        <li>Multi-entity consolidation</li>
+                        <li>12-week cash flow forecasting</li>
+                        <li>KPI dashboards</li>
+                        <li>Monthly management review</li>
+                        <li>10-day month-end close</li>
+                    </ul>
+                    <a href="#" class="btn-primary" onclick="openModal()">Get Started</a>
+                </div>
+                
+                <div class="service-card featured">
+                    <h3>Investor-Ready Finance</h3>
+                    <div class="price">Starting at $12,000/mo</div>
+                    <ul class="service-features">
+                        <li>Everything in Operational Insights</li>
+                        <li>Board-ready financial packages</li>
+                        <li>Executive commentary & analysis</li>
+                        <li>Budget & variance reporting</li>
+                        <li>Due diligence preparation</li>
+                        <li>Automation implementation</li>
+                        <li>Strategic CFO advisory</li>
+                    </ul>
+                    <a href="#" class="btn-primary" onclick="openModal()">Most Popular</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Enterprise Finance</h3>
+                    <div class="price">Custom Pricing</div>
+                    <ul class="service-features">
+                        <li>Everything in Investor-Ready</li>
+                        <li>Complex multi-entity structures</li>
+                        <li>Advanced financial modeling</li>
+                        <li>M&A transaction support</li>
+                        <li>Custom automation workflows</li>
+                        <li>Weekly executive reporting</li>
+                    </ul>
+                    <a href="#" class="btn-primary" onclick="openModal()">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"John's expertise in financial leadership is unparalleled. His genuine passion for finance, combined with consistently innovative solutions to complex challenges, makes him an invaluable asset to any organization."</p>
+                    <p class="testimonial-author">- Matt, Managing Partner</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"John has the ability to quickly and holistically understand complex systems. He has the ability to think 'outside the box', producing solutions which helped lead our team in favorable directions. His financial and technology acumen were unquestionably invaluable."</p>
+                    <p class="testimonial-author">- Belinda, Executive</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"John's professionalism and meticulous attention to financial matters has been instrumental in guiding our company through both challenges and growth opportunities. He is hands down the best financial modeler I've worked with in my 25-year career."</p>
+                    <p class="testimonial-author">- Travis, CEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Financial Reporting?</h2>
+            <p>Join the PE firms and portfolio companies already benefiting from AI-powered fractional CFO services</p>
+            <a href="#" class="btn-primary" onclick="openModal()" style="background: white; color: #1e3c72;">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Reporting Clarity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Schedule Your Free Consultation</h2>
+            <form id="consultationForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="revenue">Annual Revenue Range *</label>
+                    <select id="revenue" name="revenue" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">Select range...</option>
+                        <option value="5-10M">$5M - $10M</option>
+                        <option value="10-25M">$10M - $25M</option>
+                        <option value="25-50M">$25M - $50M</option>
+                        <option value="50M+">$50M+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="challenges">Current Financial Reporting Challenges</label>
+                    <textarea id="challenges" name="challenges" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Book Free Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('consultationModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('consultationModal').style.display = 'none';
+        }
+        
+        function downloadGuide() {
+            // In a real implementation, this would trigger a download
+            alert('Guide: "The 5 Most Common Financial Mistakes $5-20M Companies Make" would be downloaded here. This would also capture the lead\'s email address.');
+        }
+        
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! In a real implementation, this form would integrate with your CRM/calendar system to book the consultation.');
+            closeModal();
+        });
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('consultationModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

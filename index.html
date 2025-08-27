@@ -28,21 +28,19 @@
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 0.8rem 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            height: 70px;
-            display: flex;
-            align-items: center;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 100%;
         }
         
         .logo {
@@ -55,6 +53,8 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            margin: 0;
+            padding: 0;
         }
         
         .nav-links a {
@@ -62,6 +62,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s;
+            padding: 0.5rem 0;
         }
         
         .nav-links a:hover {
@@ -78,6 +79,7 @@
             text-decoration: none;
             transition: all 0.3s;
             cursor: pointer;
+            white-space: nowrap;
         }
         
         .cta-btn:hover {
@@ -407,12 +409,13 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.5rem;
         }
         
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 70px;
+            top: 80px;
             left: 0;
             width: 100%;
             background: #1e3c72;
@@ -447,29 +450,24 @@
             }
             
             header {
-                height: 65px;
-                padding: 0.6rem 0;
-            }
-            
-            nav {
-                align-items: center;
+                padding: 0.8rem 0;
             }
             
             .logo {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
             }
             
             .cta-btn {
-                padding: 8px 16px;
+                padding: 10px 20px;
                 font-size: 0.9rem;
             }
             
             .mobile-menu {
-                top: 65px;
+                top: 75px;
             }
             
             .hero {
-                padding: 85px 0 50px;
+                padding: 95px 0 50px;
                 text-align: center;
             }
             
@@ -612,25 +610,24 @@
         
         @media (max-width: 480px) {
             header {
-                height: 60px;
-                padding: 0.5rem 0;
+                padding: 0.7rem 0;
             }
             
             .logo {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
             
             .cta-btn {
-                padding: 6px 12px;
-                font-size: 0.8rem;
+                padding: 8px 16px;
+                font-size: 0.85rem;
             }
             
             .mobile-menu {
-                top: 60px;
+                top: 70px;
             }
             
             .hero {
-                padding: 75px 0 40px;
+                padding: 85px 0 40px;
             }
             
             .hero h1 {

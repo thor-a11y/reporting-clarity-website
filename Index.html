@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Oden - Fractional CFO Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #fff;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #1f4e79;
+            padding-bottom: 1rem;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            color: #1f4e79;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .value-prop {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #1f4e79;
+        }
+        
+        .value-prop p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .service-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #e3f2fd;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border-color: #1f4e79;
+        }
+        
+        .section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header {
+            background: #1f4e79;
+            color: white;
+            padding: 0.7rem 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .job {
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .job:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1f4e79;
+            margin-bottom: 0.3rem;
+        }
+        
+        .job-company {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .job-dates {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+        
+        .achievements li {
+            padding-left: 1rem;
+            margin-bottom: 0.3rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .achievements li::before {
+            content: "▸";
+            color: #1f4e79;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 700;
+            color: #1565c0;
+            border: 1px solid #90caf9;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+            margin-top: 1rem;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: #495057;
+            font-style: normal;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-box {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #1976d2;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1976d2;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: #333;
+            margin-top: 0.2rem;
+        }
+        
+        .credentials {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .cred-group {
+            background: #f8f9fa;
+            padding: 0.8rem;
+            border-radius: 5px;
+        }
+        
+        .cred-title {
+            font-weight: 600;
+            color: #1f4e79;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+        }
+        
+        .cred-item {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .contact {
+            background: #1f4e79;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        
+        .contact h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .bullet-points {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+        
+        .bullet-points li {
+            padding-left: 1rem;
+            margin-bottom: 0.4rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+        
+        .bullet-points li::before {
+            content: "✓";
+            color: #28a745;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0.5in;
+            }
+            .contact {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>John Oden, MBA</h1>
+        <div class="subtitle" style="font-size: 1.4rem; font-weight: 700; color: #1f4e79;">Fractional CFO Services</div>
+        <div class="subtitle" style="margin-top: 0.2rem; font-size: 1rem; color: #1f4e79;">Delivering PE-Ready Financials & Strategic Value Creation</div>
+    </div>
+
+    <div class="value-prop">
+        <p><strong>Transform your portfolio company's financial operations</strong> with clean, timely financials that drive smarter business decisions and maximize valuation. I deliver what PE firms demand: <span class="highlight">monthly closes in 10 days or less</span>, accurate budgeting and projections, and strategic financial leadership that accelerates growth and exit readiness.</p>
+        
+        <div class="services">
+            <div class="service-item">Ongoing Fractional CFO Leadership</div>
+            <div class="service-item">Rapid Financial Systems Implementation</div>
+            <div class="service-item">Strategic Planning & Budgeting</div>
+            <div class="service-item">Deal Readiness & Transaction Support</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">CFO Experience That Drives Results</div>
+        
+        <div class="job">
+            <div class="job-title">Chief Financial Officer | <span class="job-company">JBB Advanced Technologies</span></div>
+            <ul class="achievements">
+                <li>Delivered <span class="highlight">44.5x share price increase</span> during tenure as CFO/CIO of PE-backed investment holding company</li>
+                <li>Built accounting departments from scratch across multiple portfolio companies</li>
+                <li>Achieved consistent <span class="highlight">3-day monthly closes</span> across consolidated entities</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Chief Financial Officer | <span class="job-company">Multiple PE Portfolio Companies</span></div>
+            <ul class="achievements">
+                <li>Served as CFO for Strong AI (artificial intelligence), TXD Tankers (midstream petroleum), and Helios Insurance (P&C brokerage)</li>
+                <li>Provided ongoing financial leadership and strategic guidance to PE-backed companies</li>
+                <li>Built financial models enabling successful fundraising and strategic initiatives</li>
+            </ul>
+        </div>
+
+        <div class="testimonial">
+            "John Oden is a CFO who not only excels in his role but also enriches the overall professional environment. He embodies the qualities of a dedicated leader, a strategic thinker, and a team player."
+            <div class="testimonial-author">— Travis McElroy, CEO, Portfolio Company of JBB</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Quality of Earnings Expertise - Your Competitive Advantage</div>
+        
+        <div class="job">
+            <div class="job-title">Managing Director, Transaction Advisory Services | <span class="job-company">Whitley Penn</span></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Quality of Earnings Projects</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">$1.5B</div>
+                <div class="stat-label">Max Transaction Value</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">3 Years</div>
+                <div class="stat-label">Leading Practice</div>
+            </div>
+        </div>
+
+        <p style="margin-bottom: 1rem; font-size: 0.95rem;">My extensive Quality of Earnings experience provides unique insight into what acquirers scrutinize most. I've spent years <strong>reviewing, correcting, and optimizing CFO work</strong> across dozens of transactions. This experience allows me to:</p>
+
+        <ul class="bullet-points">
+            <li>Build financials that pass acquirer due diligence the first time</li>
+            <li>Identify and resolve potential deal issues before they arise</li>
+            <li>Structure reporting that maximizes valuation and minimizes questions</li>
+            <li>Ensure your portfolio companies are always "deal ready"</li>
+        </ul>
+
+        <div class="testimonial">
+            "John has the ability to quickly and holistically understand complex systems. We worked on several projects together, and I found him highly capable, decisive and innovative. He has the ability to think 'outside the box', producing solutions which helped to lead our team in favorable directions. His resourceful and his financial and technology acumen were unquestionably invaluable."
+            <div class="testimonial-author">— Belinda Ervin, CPCU,ARM,ARe</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Financial Modeling Excellence</div>
+        
+        <p style="margin-bottom: 1rem; font-size: 0.95rem;"><strong>16 Years of Financial Modeling Experience</strong> across private equity, real estate, and corporate finance:</p>
+
+        <ul class="achievements">
+            <li>Built model for Adjacent Capital's <span class="highlight">$50 million distressed real estate fund</span></li>
+            <li>Created projections enabling Adaptive 3D's initial fundraising <span class="highlight">(now publicly traded)</span></li>
+            <li>Developed complex acquisition models and offering memoranda for PE transactions</li>
+        </ul>
+
+        <div class="testimonial">
+            "We asked John to create a complex financial model to support our acquisition of a company. John also helped us to manage the accompanying offering memorandum. John did a great job in a short period of time. He is smart, conscientious and reliable. I would highly recommend him."
+            <div class="testimonial-author">— Adam Lampert, CEO of Consulting Client Company</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Leadership & Technology Expertise</div>
+        
+        <div class="credentials">
+            <div class="cred-group">
+                <div class="cred-title">Education & Recognition</div>
+                <div class="cred-item">MBA Finance, Southern Methodist University</div>
+                <div class="cred-item">Eagle Scout</div>
+                <div class="cred-item">DCEO Magazine M&A Awards Finalist (2021)</div>
+            </div>
+            <div class="cred-group">
+                <div class="cred-title">Technology & Certifications</div>
+                <div class="cred-item">Google Certified Generative AI Executive</div>
+                <div class="cred-item">QuickBooks, NetSuite, Xero Expert</div>
+                <div class="cred-item">All Major Accounting Platforms</div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            "Since joining the team, John has completely rebuilt our project management and continuous training processes. I am in awe of John's ability to command a room and get our team on board with new ideas, even people who were initially hesitant on accepting change."
+            <div class="testimonial-author">— Alexandra Rudder, former employee</div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h3>Ready to transform your financial operations?</h3>
+        <p>Let's discuss how I can deliver the clean, timely financials and strategic leadership your portfolio company needs to maximize value and achieve successful exits.</p>
+        <div class="contact-info">
+            John Oden | john.oden@gmail.com | 972-697-9911<br>
+            <a href="http://www.linkedin.com/in/joden/" style="color: #90caf9; text-decoration: none; margin-top: 0.5rem; display: inline-block;">LinkedIn Profile (for sequential work history)</a>
+        </div>
+    </div>
+</body>
+</html>

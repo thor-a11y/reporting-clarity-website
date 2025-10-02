@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Oden, MBA - Fractional CFO & Chief AI Officer for PE Portfolio Companies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        header h2 {
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto 30px;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.15);
+            padding: 25px 20px;
+            border-radius: 8px;
+        }
+        
+        .stat-box .number {
+            font-size: 2em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stat-box .label {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+        
+        .hero-cta {
+            margin-top: 35px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #1e3c72;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.15em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        section {
+            background: white;
+            margin: 40px 0;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+        }
+        
+        h3 {
+            color: #2a5298;
+            font-size: 1.6em;
+            margin: 25px 0 15px;
+        }
+        
+        h4 {
+            color: #1e3c72;
+            font-size: 1.3em;
+            margin: 20px 0 10px;
+        }
+        
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+        
+        .problem-box, .solution-box {
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .problem-box {
+            background: #fff5f5;
+            border-left: 5px solid #e53e3e;
+        }
+        
+        .solution-box {
+            background: #f0fff4;
+            border-left: 5px solid #38a169;
+        }
+        
+        .problem-box h3, .solution-box h3 {
+            margin-top: 0;
+        }
+        
+        .problem-box ul, .solution-box ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .problem-box li, .solution-box li {
+            margin: 10px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .comparison-table th {
+            background: #1e3c72;
+            color: white;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table td:first-child {
+            color: #666;
+        }
+        
+        .comparison-table td:last-child {
+            font-weight: 500;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid #2a5298;
+        }
+        
+        .service-card h3 {
+            margin-top: 0;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .service-card li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .service-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .highlight-box p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .roi-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #2a5298;
+        }
+        
+        .roi-card h4 {
+            margin-top: 0;
+        }
+        
+        .experience-item {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .experience-item h4 {
+            margin-top: 0;
+            color: #1e3c72;
+        }
+        
+        .experience-item .subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .experience-item ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .experience-item li {
+            margin: 8px 0;
+        }
+        
+        .highlight {
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #2a5298;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #2a5298;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .testimonial cite {
+            display: block;
+            font-style: normal;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .testimonial-quote-large {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #2a5298;
+            text-align: center;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #2a5298;
+            background: #f8f9fa;
+        }
+        
+        .why-now-box {
+            background: #f0f4f8;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .ideal-client {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .client-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #2a5298;
+        }
+        
+        .client-card h4 {
+            margin-top: 0;
+        }
+        
+        .client-card ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        .client-card li {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+        
+        .credentials-bar {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .credentials-bar p {
+            display: inline;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+        
+        .recognition-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .recognition-section h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        .recognition-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .recognition-item {
+            flex: 0 1 auto;
+        }
+        
+        .risk-reversal {
+            background: #f0f4f8;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .risk-reversal h4 {
+            margin-top: 0;
+        }
+        
+        .risk-reversal ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .risk-reversal li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+        }
+        
+        .risk-reversal li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #38a169;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header h2 {
+                font-size: 1.3em;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .problem-solution,
+            .services-grid,
+            .roi-grid,
+            .process-steps,
+            .ideal-client {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 0.85em;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px;
+            }
+            
+            section {
+                padding: 30px 20px;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+            }
+            
+            .credentials-bar p {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>John Oden, MBA</h1>
+            <h2>Fractional CFO & Chief AI Officer for PE Portfolio Companies</h2>
+            
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="number">44.5x</span>
+                    <span class="label">Share Price Appreciation as CFO</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">$3B+</span>
+                    <span class="label">Transaction Advisory Experience</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">Google</span>
+                    <span class="label">Certified Generative AI Leader</span>
+                </div>
+            </div>
+            
+            <p style="font-size: 1.2em; max-width: 850px; margin: 0 auto 25px; opacity: 0.95; font-weight: 500;">Financial excellence that passes acquirer scrutiny. AI implementation that creates competitive moats. I understand technology better than any CFO and understand PE value creation better than any technology consultant.</p>
+            
+            <div class="hero-cta">
+                <a href="https://calendly.com/thor-sentient-partners/30min" class="cta-button" target="_blank">Schedule Free Assessment</a>
+                <a href="mailto:thor@sentient-partners.com" class="cta-button secondary">Email Me</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="problem-solution">
+            <h2 style="text-align: center;">The PE Portfolio Company Challenge</h2>
+            
+            <div class="problem-solution">
+                <div class="problem-box">
+                    <h3>The Problem</h3>
+                    <ul>
+                        <li><strong>Need CFO-level financial rigor</strong> to pass acquirer due diligence and maximize valuation</li>
+                        <li><strong>Board keeps asking about AI strategy</strong> but no one has credible answers</li>
+                        <li><strong>Acquirers are discounting valuations</strong> due to outdated systems and lack of innovation</li>
+                        <li><strong>Need both financial excellence and AI expertise</strong> but struggle to find one operator with both capabilities</li>
+                        <li><strong>Traditional CFOs don't understand AI;</strong> AI consultants don't understand PE value drivers</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-box">
+                    <h3>The Solution</h3>
+                    <p><strong>One experienced operator who delivers both.</strong></p>
+                    <ul>
+                        <li>18 years as CFO in PE-backed companies</li>
+                        <li>Led acquisition and served as CFO for multiple portfolio companies</li>
+                        <li>50+ Quality of Earnings projects ($3B+ total value)</li>
+                        <li>Google Certified Generative AI Leader with proven implementations</li>
+                        <li>Delivered 44.5x value creation as CFO</li>
+                        <li>Speaks both boardroom finance and AI strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-fractional" style="background: #f8f9fa;">
+            <h2 style="text-align: center;">Why Fractional CFO + Chief AI Officer?</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Full-Time Hires</th>
+                        <th>Fractional Approach with John Oden</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hire separate CFO and AI/technology leader</td>
+                        <td>One operator with 18 years PE CFO experience + Google AI certification</td>
+                    </tr>
+                    <tr>
+                        <td>6-12 month hiring process for each role</td>
+                        <td>Immediate deployment, start delivering value week one</td>
+                    </tr>
+                    <tr>
+                        <td>Full-time commitment with all associated obligations</td>
+                        <td>Strategic expertise when you need it, flexible engagement model</td>
+                    </tr>
+                    <tr>
+                        <td>Hope they understand PE dynamics and value drivers</td>
+                        <td>Proven track record: 44.5x appreciation, $3B+ in transactions, M&A Awards finalist</td>
+                    </tr>
+                    <tr>
+                        <td>Two people who may not align priorities</td>
+                        <td>One person, one aligned strategy focused on exit value</td>
+                    </tr>
+                    <tr>
+                        <td>CFO may resist technology changes; AI hire may not understand financial constraints</td>
+                        <td>AI investments directly support financial objectives and create measurable ROI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="differentiator">
+            <h2 style="text-align: center;">Why PE Experience Matters for AI</h2>
+            
+            <p style="text-align: center; font-size: 1.15em; margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">Most AI consultants have never sat through due diligence, defended EBITDA adjustments, or built a company for exit. I implement AI where it actually creates value for PE investors—not just impressive technology demos.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Traditional AI Consultant</th>
+                        <th>John Oden</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"Let's implement this cool technology"</td>
+                        <td>"Will this improve EBITDA or revenue per employee?"</td>
+                    </tr>
+                    <tr>
+                        <td>Background in engineering/computer science</td>
+                        <td>18 years as PE portfolio company CFO and transaction advisor</td>
+                    </tr>
+                    <tr>
+                        <td>Focused on technical capabilities</td>
+                        <td>Focused on exit value creation and IRR impact</td>
+                    </tr>
+                    <tr>
+                        <td>Long implementation timelines with unclear ROI</td>
+                        <td>Rapid deployment with clear financial outcomes</td>
+                    </tr>
+                    <tr>
+                        <td>Never sat through due diligence</td>
+                        <td>Led 50+ Quality of Earnings projects ($3B+ total value)</td>
+                    </tr>
+                    <tr>
+                        <td>Speaks in technical jargon</td>
+                        <td>Speaks to PE boards and understands value drivers</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <p><strong>I speak the language of IRR, not just APIs.</strong> Most AI consultants start with technology. I start with the investment thesis and ensure every dollar spent creates measurable value.</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2 style="text-align: center;">What I Deliver</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>CFO Leadership</h3>
+                    <ul>
+                        <li>Acquirer-ready financials that eliminate deal delays and valuation haircuts</li>
+                        <li>Financial models that support strategic decisions and fundraising success</li>
+                        <li>Financial operations that pass due diligence the first time</li>
+                        <li>Board presentations that tell the value creation story investors and buyers want to hear</li>
+                        <li>Build accounting departments from scratch with best-in-class processes</li>
+                        <li>Strategic planning and scenario analysis focused on exit optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>AI Strategy & Implementation</h3>
+                    <ul>
+                        <li>AI automation that demonstrably improves EBITDA through cost reduction</li>
+                        <li>Rapid deployment focused on high-ROI opportunities, not vanity projects</li>
+                        <li>Process automation that enables revenue scaling without proportional headcount growth</li>
+                        <li>AI implementations that command premium multiples in buyer presentations</li>
+                        <li>Knowledge management systems that reduce institutional risk and improve decision-making</li>
+                        <li>Marketing and sales automation that increases output quality and competitive differentiation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>The Only CFO Who Also Implements AI:</strong> I ensure every AI investment directly supports financial objectives and creates measurable ROI—not just technology for technology's sake. You get both strategic financial leadership and competitive technology advantage from one experienced operator.</p>
+            </div>
+        </section>
+
+        <section id="value">
+            <h2 style="text-align: center;">Value & Impact</h2>
+            
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <h4>Financial Excellence</h4>
+                    <p><strong>What You Get:</strong> Strategic CFO leadership with proven PE expertise</p>
+                    <p><strong>Specific Outcomes:</strong> Clean audit opinions, no restatements, faster closes, deal-ready financials that eliminate acquirer adjustments</p>
+                    <p><strong>Business Impact:</strong> Accelerated exit readiness and higher valuation multiples through financial operations that buyers recognize and reward</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4>Operational Efficiency</h4>
+                    <p><strong>What You Get:</strong> AI-powered process improvements in high-impact areas</p>
+                    <p><strong>Specific Outcomes:</strong> 30-50% cost reduction in targeted processes, headcount leverage enabling growth without proportional hiring, margin expansion</p>
+                    <p><strong>Business Impact:</strong> Improved EBITDA and revenue-per-employee metrics that directly increase enterprise value</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4>Competitive Differentiation</h4>
+                    <p><strong>What You Get:</strong> Implemented AI capabilities that set you apart from competitors</p>
+                    <p><strong>Specific Outcomes:</strong> Demonstrable innovation for LP communications, competitive advantages in your market, technology capabilities buyers actively seek</p>
+                    <p><strong>Business Impact:</strong> Premium exit multiples from buyers willing to pay for proven AI implementation and competitive moats</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4>Exit Optimization</h4>
+                    <p><strong>What You Get:</strong> An operator who understands what drives successful exits</p>
+                    <p><strong>Specific Outcomes:</strong> Higher EBITDA multiples, faster transaction timelines, fewer buyer adjustments, strong quality of earnings reports</p>
+                    <p><strong>Business Impact:</strong> Maximized IRR through both operational improvements and exit execution that captures full value</p>
+                </div>
+            </div>
+
+            <div class="risk-reversal">
+                <h4>Why This Works for PE Firms</h4>
+                <ul>
+                    <li>No long-term commitment required—prove value in first 90 days</li>
+                    <li>Fractional model means strategic expertise exactly when needed</li>
+                    <li>44.5x track record proves I understand value creation, not just theory</li>
+                    <li>Google certified + hands-on AI implementation experience</li>
+                    <li>I've sat on both sides: operating companies AND due diligence reviews</li>
+                    <li>Every initiative evaluated through the lens of "Does this increase enterprise value?"</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="track-record">
+            <h2 style="text-align: center;">Track Record</h2>
+            
+            <div class="testimonial-quote-large">
+                "John is hands down the best financial modeler I've had the pleasure of working with in my 25 year career."
+                <div style="margin-top: 15px; font-size: 0.75em; font-style: normal; color: #1e3c72; font-weight: 600;">
+                    — Travis McElroy, CEO, Portfolio Company of JBB Advanced Technologies
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <h4>Chief Financial Officer | JBB Advanced Technologies</h4>
+                <p class="subtitle">Private Investment Holding Company</p>
+                <ul>
+                    <li><span class="highlight">Delivered 44.5x share price appreciation</span> based on formal external valuation during tenure as CFO/CIO</li>
+                    <li>Built accounting departments from scratch across multiple portfolio companies</li>
+                    <li>Achieved consistent 3-day monthly closes across consolidated entities</li>
+                    <li>Led technology strategy and implementation initiatives across portfolio</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Managing Director, Transaction Advisory Services | Whitley Penn</h4>
+                <p class="subtitle">Leading Transaction Advisory Practice</p>
+                <ul>
+                    <li><span class="highlight">Led 50+ Quality of Earnings projects</span> totaling $3B+ in transaction value (largest single transaction: $1.5B)</li>
+                    <li>Reviewed hundreds of portfolio company financials—I know exactly what works and what breaks under acquirer scrutiny</li>
+                    <li>Unique insight into which operational improvements enhance valuations vs. create red flags in due diligence</li>
+                    <li><span class="highlight">Finalist - D CEO Magazine M&A Awards 2021</span></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Chief Financial Officer | Multiple PE Portfolio Companies</h4>
+                <p class="subtitle">Strong AI (artificial intelligence) | TXD Tankers (midstream petroleum) | Helios Insurance (P&C brokerage)</p>
+                <ul>
+                    <li>Led acquisition and provided ongoing CFO leadership for portfolio companies</li>
+                    <li>Built financial models enabling successful fundraising and strategic initiatives</li>
+                    <li>Implemented robust financial controls and reporting systems from the ground up</li>
+                    <li>Led board presentations and investor communications focused on value creation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>18 Years of Financial Modeling & Strategic Finance</h4>
+                <p class="subtitle">Private Equity, Real Estate, and Corporate Finance</p>
+                <ul>
+                    <li>Built model for Adjacent Capital's $50 million distressed real estate fund</li>
+                    <li>Created projections enabling Adaptive 3D's initial fundraising (company now publicly traded)</li>
+                    <li>Developed complex acquisition models and offering memoranda for PE transactions</li>
+                </ul>
+            </div>
+            
+            <div class="recognition-section">
+                <h3>Credentials & Recognition</h3>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 30px;">
+                    <div style="text-align: center; padding: 25px; background: white; border-radius: 8px; border-top: 3px solid #2a5298;">
+                        <div style="font-size: 2.5em; color: #2a5298; margin-bottom: 10px;">🎓</div>
+                        <p style="font-weight: 600; margin-bottom: 8px; color: #1e3c72;">Google Certified</p>
+                        <p style="font-size: 0.9em; color: #666;">Generative AI Leader</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px; background: white; border-radius: 8px; border-top: 3px solid #2a5298;">
+                        <div style="font-size: 2.5em; color: #2a5298; margin-bottom: 10px;">🏆</div>
+                        <p style="font-weight: 600; margin-bottom: 8px; color: #1e3c72;">D CEO Magazine</p>
+                        <p style="font-size: 0.9em; color: #666;">M&A Awards Finalist 2021</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px; background: white; border-radius: 8px; border-top: 3px solid #2a5298;">
+                        <div style="font-size: 2.5em; color: #2a5298; margin-bottom: 10px;">📚</div>
+                        <p style="font-weight: 600; margin-bottom: 8px; color: #1e3c72;">MBA</p>
+                        <p style="font-size: 0.9em; color: #666;">Cox School of Business (SMU)</p>
+                    </div>
+                    <div style="text-align: center; padding: 25px; background: white; border-radius: 8px; border-top: 3px solid #2a5298;">
+                        <div style="font-size: 2.5em; color: #2a5298; margin-bottom: 10px;">💼</div>
+                        <p style="font-weight: 600; margin-bottom: 8px; color: #1e3c72;">18 Years</p>
+                        <p style="font-size: 0.9em; color: #666;">PE & CFO Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-now">
+            <h2 style="text-align: center;">Why AI Is Critical for PE Portfolio Companies Now</h2>
+            
+            <div class="why-now-box">
+                <p style="font-size: 1.1em; line-height: 1.8;"><strong>AI has reached an inflection point:</strong> mature enough to deliver real ROI, but early enough that implementation creates genuine competitive advantage.</p>
+                
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 20px;">PE firms are facing a critical decision: <strong>Portfolio companies that implement AI thoughtfully in 2025-2026 will command premium multiples.</strong> Those that wait will be playing catch-up against competitors who moved first.</p>
+                
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 20px;">The challenge isn't whether to implement AI—it's finding someone who understands both the technology AND what drives value in PE investments. That's where my 18 years of PE CFO experience combined with cutting-edge AI expertise creates unique value.</p>
+                
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 20px; font-weight: 600;">Most portfolio companies are 2-3 years behind on AI implementation. The firms that move now will capture significant competitive advantages and exit value premiums.</p>
+            </div>
+        </section>
+
+        <section id="process">
+            <h2 style="text-align: center;">How It Works</h2>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Initial Assessment</h4>
+                    <p>Financial operations audit + AI opportunity identification + Prioritized roadmap with ROI projections</p>
+                    <p style="margin-top: 10px; font-weight: 600;">One Month or Less</p>
+                    <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Comprehensive strategic roadmap delivered</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>CFO Leadership</h4>
+                    <p>Monthly close and reporting + Board presentations + Strategic planning and modeling</p>
+                    <p style="margin-top: 10px; font-weight: 600;">Ongoing</p>
+                    <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Flexible engagement based on your needs</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>AI Implementation</h4>
+                    <p>Rapid prototyping + Pilot deployment and testing + Scale and optimization based on results</p>
+                    <p style="margin-top: 10px; font-weight: 600;">Parallel Track</p>
+                    <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Timeline varies by project complexity</p>
+                </div>
+            </div>
+
+            <div style="background: #f0f4f8; padding: 25px; border-radius: 8px; margin-top: 30px;">
+                <h4 style="margin-top: 0;">Flexible Engagement Models</h4>
+                <ul style="padding-left: 25px; margin: 10px 0;">
+                    <li style="margin: 10px 0;"><strong>Ongoing Retainer (Preferred):</strong> Consistent CFO leadership + AI implementation as opportunities arise</li>
+                    <li style="margin: 10px 0;"><strong>Project-Based:</strong> Specific financial or AI initiatives with defined scope and outcomes</li>
+                    <li style="margin: 10px 0;"><strong>Equity + Cash:</strong> Aligned incentives for long-term value creation</li>
+                </ul>
+                <p style="margin-top: 20px; font-style: italic; color: #666;">All engagements structured around the value created, not hourly rates. Focus on initiatives that demonstrably improve financial operations, reduce operational costs, or create competitive advantages.</p>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2 style="text-align: center;">What Clients Say</h2>
+
+            <div class="testimonial">
+                <p>"We asked John to create a complex financial model to support our acquisition of a company. John also helped us to manage the accompanying offering memorandum. John did a great job in a short period of time. He is smart, conscientious and reliable. I would highly recommend him."</p>
+                <cite>— Adam Lampert, Managing Partner, Nextband Partners (PE Firm)</cite>
+            </div>
+
+            <div class="testimonial">
+                <p>"My experience with John Oden and Whitley Penn's Transaction Advisory Services team was exceptional. Whitley Penn conducted the Quality of Earnings process on behalf of the buyer when my company was being sold. Their professionalism and personability allowed me to feel comfortable throughout the process."</p>
+                <cite>— Lars Herman, Business Owner (Company Sale)</cite>
+            </div>
+
+            <div class="testimonial">
+                <p>"John has the ability to quickly and holistically understand complex systems. We worked on several projects together, and I found him highly capable, decisive and innovative. He has the ability to think 'outside the box', producing solutions which helped to lead our team in favorable directions. His resourceful and his financial and technology acumen were unquestionably invaluable."</p>
+                <cite>— Belinda Ervin, CPCU, ARM, ARe</cite>
+                <p style="margin-top: 12px; font-style: normal; font-size: 0.95em; color: #666;">Technology leadership and financial expertise that bridges the gap between CFO and technical implementation.</p>
+            </div>
+        </section>
+
+        <section id="ideal-client">
+            <h2 style="text-align: center;">Ideal Client Profile</h2>
+            
+            <div class="ideal-client">
+                <div class="client-card">
+                    <h4>Portfolio Companies</h4>
+                    <ul>
+                        <li>$25M-$200M revenue</li>
+                        <li>Years 3-7 of hold period</li>
+                        <li>Need exit preparation and operational improvements</li>
+                        <li>Open to AI/automation for competitive advantage</li>
+                        <li>Want fractional expertise without full-time overhead</li>
+                        <li>Board asking about AI strategy and innovation</li>
+                    </ul>
+                </div>
+                
+                <div class="client-card">
+                    <h4>PE Firms</h4>
+                    <ul>
+                        <li>Lower middle market focus</li>
+                        <li>Multiple portfolio companies needing consistent financial leadership</li>
+                        <li>Value innovation and operational improvement</li>
+                        <li>Focused on maximizing exit multiples and IRR</li>
+                        <li>Want to demonstrate AI capabilities to LPs and buyers</li>
+                        <li>Need proven operators who understand value creation</li>
+                    </ul>
+                </div>
+                
+                <div class="client-card">
+                    <h4>Family Offices</h4>
+                    <ul>
+                        <li>Multiple operating companies or investments</li>
+                        <li>Need consistent financial governance across holdings</li>
+                        <li>Interested in AI implementation portfolio-wide</li>
+                        <li>Value operational excellence and innovation</li>
+                        <li>Want proven expertise without full-time commitment</li>
+                        <li>Seeking to build competitive advantages through technology</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: #f0f4f8; padding: 25px; border-radius: 8px; margin-top: 30px; text-align: center;">
+                <p style="font-size: 1.1em; margin: 0;"><strong>Geographic Focus:</strong> North America and Middle East</p>
+                <p style="font-size: 1.1em; margin: 10px 0 0 0;"><strong>Current Capacity:</strong> Accepting 2-3 new clients depending on project scope</p>
+            </div>
+        </section>
+
+        <section id="ai-capabilities" style="background: #f8f9fa;">
+            <h2 style="text-align: center;">AI Implementation Capabilities</h2>
+            
+            <p style="text-align: center; font-size: 1.05em; max-width: 900px; margin: 0 auto 30px;">Recent consulting projects demonstrating the AI capabilities I bring to portfolio companies:</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Custom CRM Development</h4>
+                    <p>Built production-ready CRM using AI-assisted development.</p>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 15px;">
+                        <li>Fully customizable fields for unique business requirements</li>
+                        <li>Automated follow-up scheduling with intelligent reminders</li>
+                        <li>Automated news aggregation for relationship nurturing</li>
+                        <li><strong>Rapid deployment with tailored functionality</strong></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>AI Sales Coaching System</h4>
+                    <p>Automated sales performance improvement platform.</p>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 15px;">
+                        <li>Analyzes sales meetings automatically</li>
+                        <li>Delivers personalized feedback to reps</li>
+                        <li>Eliminates manual coaching bottleneck</li>
+                        <li><strong>Scalable across entire team without adding headcount</strong></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Knowledge Management Platform</h4>
+                    <p>Custom IP tracking system for professional services firm.</p>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 15px;">
+                        <li>Fully customized categorization interfaces</li>
+                        <li>Sophisticated prioritization and cross-linking</li>
+                        <li>Reduces knowledge loss risk</li>
+                        <li><strong>Leverages institutional knowledge across organization</strong></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Marketing Content Automation</h4>
+                    <p>AI-powered content generation system for marketing firm.</p>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 15px;">
+                        <li>Customized workflows for brand-aligned content</li>
+                        <li>Gamified digital real estate platform</li>
+                        <li>Proved technical viability for scale</li>
+                        <li><strong>Quality content at scale with brand consistency</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-top: 30px;">
+                <h4 style="margin-top: 0;">AI Tools & Platforms</h4>
+                <p style="margin: 10px 0;"><strong>AI:</strong> ChatGPT (OpenAI), Claude (Anthropic), Relay.app, Fireflies.AI, Replit, Google NotebookLM</p>
+                <p style="margin: 10px 0;"><strong>Financial Systems:</strong> NetSuite, QuickBooks, Sage Intacct, Advanced Excel/Google Sheets financial modeling</p>
+            </div>
+        </section>
+    </div>
+
+    <section style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center; padding: 60px 40px; margin: 0;">
+        <div class="container">
+            <h2 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Ready to Discuss Your Portfolio Company's Needs?</h2>
+            <p style="font-size: 1.2em; max-width: 750px; margin: 20px auto; opacity: 0.95;">Schedule a free 30-minute assessment where we'll:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 20px auto; list-style: none; padding: 0;">
+                <li style="padding: 8px 0; font-size: 1.1em;">✓ Identify your biggest financial operations gaps</li>
+                <li style="padding: 8px 0; font-size: 1.1em;">✓ Discover 2-3 high-ROI AI opportunities specific to your business</li>
+                <li style="padding: 8px 0; font-size: 1.1em;">✓ Outline a 90-day roadmap with measurable outcomes</li>
+            </ul>
+            <div style="margin-top: 35px;">
+                <a href="https://calendly.com/thor-sentient-partners/30min" class="cta-button" target="_blank" style="margin: 0 10px;">Schedule Free Assessment</a>
+                <a href="mailto:thor@sentient-partners.com" class="cta-button secondary" style="margin: 0 10px;">Email: thor@sentient-partners.com</a>
+            </div>
+            <p style="font-size: 0.95em; margin-top: 25px; opacity: 0.9;">No long-term commitment required. Prove value first.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 John Oden, MBA | Fractional CFO & Chief AI Officer</p>
+            <p style="margin-top: 10px;">
+                <a href="https://www.linkedin.com/in/joden/" target="_blank">Connect on LinkedIn</a> | 
+                <a href="mailto:thor@sentient-partners.com">thor@sentient-partners.com</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Thought leadership on AI and CFO topics available on LinkedIn</p>
+        </div>
+    </footer>
+</body>
+</html>
